@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <title>Sign Up!</title>
+    
+</head>
+<body>
+    <div id="header">
+        <h1>Sign up to our Newsletter</h1>
+        <h3>Fill in to sign up and get the latest news directly into your inbox!</h3>
+    </div>
+
+    <form>
+        <div class="input-container">
+            <label for="first-name">First name:  </label>
+            <input type="text" id="first-name" minlength="1" maxlength="50" required>
+        </div>
+        <p class="error-msg hidden" id="first-name-error">You must enter a first name</p>
+        <div class="input-container">
+            <label for="last-name">Last name: </label>
+            <input type="text" id="last-name" minlength="1" maxlength="50" required>
+        </div>
+        <p class="error-msg hidden" id="last-name-error">You must enter a last name</p>
+        <div class="input-container">
+            <label for="username">Username: </label>
+            <input type="text" id="username" minlength="6" maxlength="20" required>
+        </div>
+        <p class="error-msg hidden" id="username-error">Usernames must be between 6 and 20 characters long and contain only letters and numbers</p>
+        <div class="input-container">
+            <label for="email">Email: </label>
+            <input type="email" id="email" aria-describedby="email-error" required>
+        </div>
+        <p class="error-msg hidden" id="email-error">Please provide a valid email</p>
+        <div class="input-container">
+            <label for="password">Password: </label>
+            <input type="password" id="password" required minlength="8" maxlength="20">
+        </div>
+        <p class="error-msg hidden" id="pw-error-msg">Passwords must be between 8 and 20 characters long and contain at least an uppercase, a lowercase, a number and a special character (!?@).</p>
+        <div class="input-container">
+            <label for="confirm-password">Confirm password: </label>
+            <input type="password" id="confirm-password" required minlength="8" maxlength="20">
+        </div>
+        <p class="error-msg  hidden" id="confirm-pw-error">Passwords must match.</p>
+        <div class="input-container">
+            <div class="checkbox-container">
+                <input type="checkbox" id="t&c" class="t-and-c" required>
+            </div>
+            <label for="t&c">By checking this box you are agreeing to our <a href="#">Terms & Conditions</a>.</label>
+        </div>
+        <p class="error-msg hidden" id="tc-error">You must agree to the Terms and Conditions to Sign Up.</p>
+        <button type="submit" id="submit-btn">Sign up</button>
+        <button type="button" id="clear-all">Clear all fields</button>
+    </form>
+
+    <div class="hidden" id="success">
+        <img src="https://www.clipartkey.com/mpngs/m/283-2836740_success-icon-transparent-green-success-png-icon.png" class="success-icon">
+        <h2><span id="user-first-name"></span>, thank you for subscribing to our Newsletter!</h2>
+        <p>Feel free to unsubscribe at anytime by clicking in the link at the bottom of the Newsletter email you'll receive each week!</p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
